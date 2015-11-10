@@ -7,9 +7,9 @@ videojs.plugin('pluginDev', function() {
   overlay.innerHTML = "Becoming a plugin developer";
   player.el().appendChild(overlay);
   
-  player.catalog.getVideo('myPlayer.options()['data-video-id']', function(error, video) {
+  player.catalog.getVideo('player.options()['data-video-id']', function(error, video) {
    player.catalog.load(video);
-   cuePointAra = myPlayer.mediainfo.cue_points;
+   cuePointAra = player.mediainfo.cue_points;
         var tt = player.textTracks()[0];
         tt.oncuechange = function() {
           if(tt.activeCues[0] !== undefined){
