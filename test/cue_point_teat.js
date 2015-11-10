@@ -7,6 +7,7 @@ videojs.plugin('pluginDev', function() {
   overlay.innerHTML = "Becoming a plugin developer";
   player.el().appendChild(overlay);
   
+  //player.catalog.getVideo('player.options()['data-video-id']', function(error, video) {
   player.catalog.getVideo('player.options()['data-video-id']', function(error, video) {
    player.catalog.load(video);
    cuePointAra = player.mediainfo.cue_points;
@@ -18,13 +19,13 @@ videojs.plugin('pluginDev', function() {
             dynamicHTML += "startTime: " + tt.activeCues[0].startTime + ",  ";
             dynamicHTML += "endTime: " + tt.activeCues[0].endTime;
             document.getElementById("insertionPoint").innerHTML += dynamicHTML + "<br/>";
-              allCuePointData = getSubArray(cuePointAra,'time',tt.activeCues[0].startTime);
+             /* allCuePointData = getSubArray(cuePointAra,'time',tt.activeCues[0].startTime);
             console.log('cue point data:', allCuePointData);
-            console.log('cue point metadata:', allCuePointData[0].metadata);
+            console.log('cue point metadata:', allCuePointData[0].metadata);*/
           }
         }
         player.play();
-        player.muted(true);
+       /* player.muted(true);
       });
       function getSubArray(targetArray, objProperty, value) {
         var i, totalItems = targetArray.length,
@@ -36,6 +37,6 @@ videojs.plugin('pluginDev', function() {
             idxArr.push(targetArray[i]);
           }
         }
-        return idxArr;
+        return idxArr;*/
       };
 });
