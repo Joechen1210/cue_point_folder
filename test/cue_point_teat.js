@@ -5,7 +5,7 @@ videojs.plugin('pluginDev', function() {
   overlay.innerHTML = "Becoming a plugin developer";
   player.el().appendChild(overlay);
   
-  player.catalog.getVideo('4601791650001', function(error, video) {
+  player.catalog.getVideo('4601759356001', function(error, video) {
    player.catalog.load(video);
         var tt = player.textTracks()[0];
         tt.oncuechange = function() {
