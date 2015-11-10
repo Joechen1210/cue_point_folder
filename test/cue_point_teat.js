@@ -38,5 +38,5 @@ videojs.plugin('pluginDev', function() {
           }
         }
         return idxArr;*/
-      };
+      });
 });
