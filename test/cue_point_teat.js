@@ -18,7 +18,7 @@ videojs.plugin('pluginDev', function() {
             dynamicHTML += "text: " + tt.activeCues[0].text + ", ";
             dynamicHTML += "startTime: " + tt.activeCues[0].startTime + ",  ";
             dynamicHTML += "endTime: " + tt.activeCues[0].endTime;
-            //dynamicHTML += "endTime: " + tt.activeCues[0].content;
+            dynamicHTML += "metadata: " + tt.activeCues[0].metadata;
             document.getElementById("insertionPoint").innerHTML += dynamicHTML + "<br/>";
              /* allCuePointData = getSubArray(cuePointAra,'time',tt.activeCues[0].startTime);
             console.log('cue point data:', allCuePointData);
