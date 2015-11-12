@@ -17,8 +17,10 @@ videojs.plugin('pluginDev', function() {
         var dynamicHTML = "id: " + tt.activeCues[0].id + ", ";
             dynamicHTML += "text: " + tt.activeCues[0].text + ", ";
             dynamicHTML += "startTime: " + tt.activeCues[0].startTime + ",  ";
-            dynamicHTML += "endTime: " + tt.activeCues[0].endTime;
+            dynamicHTML += "endTime: " + tt.activeCues[0].endTime + ",  ";
             dynamicHTML += "name: " + tt.activeCues[0].name + ", ";
+            dynamicHTML += "cue: " + tt.activeCues[0].cue + ", ";
+            dynamicHTML += "cuepoint: " + tt.activeCues[0].cuepoint + ", ";
             dynamicHTML += "type: " + tt.activeCues[0].type + ", ";
             dynamicHTML += "title: " + tt.activeCues[0].title + ", ";
             dynamicHTML += "description: " + tt.activeCues[0].description + ", ";
