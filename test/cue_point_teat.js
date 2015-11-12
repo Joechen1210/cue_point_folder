@@ -18,13 +18,13 @@ videojs.plugin('pluginDev', function() {
             dynamicHTML += "text: " + tt.activeCues[0].text + ", ";
             dynamicHTML += "startTime: " + tt.activeCues[0].startTime + ",  ";
             dynamicHTML += "endTime: " + tt.activeCues[0].endTime;
-             dynamicHTML = "name: " + tt.activeCues[0].name + ", ";
+            dynamicHTML += "name: " + tt.activeCues[0].name + ", ";
             dynamicHTML += "type: " + tt.activeCues[0].type + ", ";
-            dynamicHTML = "title: " + tt.activeCues[0].title + ", ";
+            dynamicHTML += "title: " + tt.activeCues[0].title + ", ";
             dynamicHTML += "description: " + tt.activeCues[0].description + ", ";
-             document.getElementById("insertionPoint").innerHTML += dynamicHTML + "<br/><br/>";
+             document.getElementById("insertionPoint").innerHTML += dynamicHTML + "< + br/><br/>";
             jsonData = JSON.parse(tt.activeCues[0].text);
-            document.getElementById("insertionPoint").innerHTML += jsonData.title + ": " + jsonData.description + "<br/><br/>";
+            document.getElementById("insertionPoint").innerHTML += "title: " + jsonData.title + "description: " + jsonData.description + "<br/><br/>";
           } else {
             document.getElementById("insertionPoint").innerHTML += "Cue point duration over" + "<br/><br/>";
           }
