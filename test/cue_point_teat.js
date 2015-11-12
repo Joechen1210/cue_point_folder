@@ -25,8 +25,8 @@ videojs.plugin('pluginDev', function() {
             dynamicHTML += "title: " + tt.activeCues[0].title + ", ";
             dynamicHTML += "description: " + tt.activeCues[0].description + ", ";
              document.getElementById("insertionPoint").innerHTML += dynamicHTML + "<br/><br/>";
-            jsonData = JSON.parse(tt.activeCues[0].text);
-            document.getElementById("insertionPoint").innerHTML += "title: " + jsonData.title + "description: " + jsonData.description + "<br/><br/>";
+            //jsonData = JSON.parse(tt.activeCues[0].text);
+            //document.getElementById("insertionPoint").innerHTML += "title: " + jsonData.title + "description: " + jsonData.description + "<br/><br/>";
           } else {
             document.getElementById("insertionPoint").innerHTML += "Cue point duration over" + "<br/><br/>";
           }
