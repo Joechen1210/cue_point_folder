@@ -3,17 +3,21 @@
     <head>
       <meta charset="UTF-8">
       <title>Quick Start plugin</title>
-      <link href="https://raw.githubusercontent.com/Joechen1210/cue_point_folder/master/test/cue_point_test.css" rel="stylesheet">
+      <link href="http://127.0.0.1:56521/cue_point_test.css" rel="stylesheet">
     </head>
      <body>
     <video id="player"
-      data-video-id="4601759356001"
+      data-video-id="4006182806001"
       data-account="4005328949001"
       data-player="be3d829b-3031-41b9-933b-227664b9e283"
       data-embed="default"
-      class="video-js" controls></video>
+      class="video-js" controls>  
+        
+      <track kind="metadata" src="https://solutions.brightcove.com/bcls/tests/player/cuepoints.vtt" />
+        
+    </video>
     <script src="//players.brightcove.net/4005328949001/be3d829b-3031-41b9-933b-227664b9e283_default/index.min.js"></script>
-     <script type="text/javascript" src="https://raw.githubusercontent.com/Joechen1210/cue_point_folder/master/test/cue_point_teat.js"></script>  
+     <script type="text/javascript" src="http://127.0.0.1:56521/cue_point_teat.js"></script>  
      <script>videojs('player').pluginDev();</script>
      <h1>....Get Cue infor.........</h1>
       <p id="insertionPoint"></p>
