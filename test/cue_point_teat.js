@@ -6,38 +6,28 @@ videojs.plugin('pluginDev', function() {
   overlay.className = 'vjs-overlay';
   overlay.innerHTML = "Becoming a plugin developer";
   player.el().appendChild(overlay);
-  
-  player.catalog.getVideo('player.options()["data-video-id"]', function(error, video) {
-  //player.catalog.getVideo('4601759356001', function(error, video) {
-   player.catalog.load(video);
-   cuePointAra = player.mediainfo.cue_points;
-        var tt = player.textTracks()[0];
+    
+  player.catalog.getVideo(player.options()['data-video-id'], function(error, video){
+    player.catalog.load(video);
+       player.one("loadedmetadata",function(){
+        var trackIndex = player.textTracks().length -1;
+        var tt = player.textTracks()[trackIndex];
         tt.oncuechange = function() {
           if(tt.activeCues[0] !== undefined){
-            var dynamicHTML = "id: " + tt.activeCues[0].id + ", ";
+        var dynamicHTML = "id: " + tt.activeCues[0].id + ", ";
             dynamicHTML += "text: " + tt.activeCues[0].text + ", ";
             dynamicHTML += "startTime: " + tt.activeCues[0].startTime + ",  ";
             dynamicHTML += "endTime: " + tt.activeCues[0].endTime;
-            dynamicHTML += "metadata: " + tt.activeCues[0].metadata;
-            document.getElementById("insertionPoint").innerHTML += dynamicHTML + "<br/>";
-             /* allCuePointData = getSubArray(cuePointAra,'time',tt.activeCues[0].startTime);
-            console.log('cue point data:', allCuePointData);
-            console.log('cue point metadata:', allCuePointData[0].metadata);*/
+            document.getElementById("insertionPoint").innerHTML += dynamicHTML + "<br/><br/>";
+            jsonData = JSON.parse(tt.activeCues[0].text);
+            document.getElementById("insertionPoint").innerHTML += jsonData.title + ": " + jsonData.description + "<br/><br/>";
+          } else {
+            document.getElementById("insertionPoint").innerHTML += "Cue point duration over" + "<br/><br/>";
           }
-        }
+        } //end oncuechange
         player.play();
-       /* player.muted(true);
-      });
-      function getSubArray(targetArray, objProperty, value) {
-        var i, totalItems = targetArray.length,
-          objFound = false,
-          idxArr = [];
-        for (i = 0; i < totalItems; i++) {
-          if (targetArray[i][objProperty] === value) {
-            objFound = true;
-            idxArr.push(targetArray[i]);
-          }
-        }
-        return idxArr;*/
-      });
+        player.muted(true);
+      }); //end loadedmetadata
+   });
 });
+
