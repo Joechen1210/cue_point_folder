@@ -18,7 +18,7 @@ videojs.plugin('pluginDev', function() {
             dynamicHTML += "text: " + tt.activeCues[0].text + ", ";
             dynamicHTML += "startTime: " + tt.activeCues[0].startTime + ",  ";
             dynamicHTML += "endTime: " + tt.activeCues[0].endTime + ",  ";
-            dynamicHTML += "text: " + tt.activeCues[0].id.text + ", ";
+            dynamicHTML += "text2: " + tt.activeCues[0].id.text + ", ";
             dynamicHTML += "name: " + tt.activeCues[0].name + ", ";
             dynamicHTML += "content: " + tt.activeCues[0].content + ", ";
             dynamicHTML += "align: " + tt.activeCues[0].align + ", ";
