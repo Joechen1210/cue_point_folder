@@ -19,11 +19,11 @@ videojs.plugin('pluginDev', function() {
             dynamicHTML += "startTime: " + tt.activeCues[0].startTime + ",  ";
             dynamicHTML += "endTime: " + tt.activeCues[0].endTime + ",  ";
             dynamicHTML += "name: " + tt.activeCues[0].name + ", ";
-            dynamicHTML += "cue: " + tt.activeCues[0].cue + ", ";
-            dynamicHTML += "cuepoint: " + tt.activeCues[0].cuepoint + ", ";
+            dynamicHTML += "content: " + tt.activeCues[0].content + ", ";
+            dynamicHTML += "align: " + tt.activeCues[0].align + ", ";
             dynamicHTML += "type: " + tt.activeCues[0].type + ", ";
-            dynamicHTML += "title: " + tt.activeCues[0].title + ", ";
-            dynamicHTML += "description: " + tt.activeCues[0].description + ", ";
+            //dynamicHTML += "title: " + tt.activeCues[0].title + ", ";
+            //dynamicHTML += "description: " + tt.activeCues[0].description + ", ";
              document.getElementById("insertionPoint").innerHTML += dynamicHTML + "<br/><br/>";
             //jsonData = JSON.parse(tt.activeCues[0].text);
             //document.getElementById("insertionPoint").innerHTML += "title: " + jsonData.title + "description: " + jsonData.description + "<br/><br/>";
