@@ -33,7 +33,7 @@
     
         function changeVideo(){
             myPlayer.catalog.getVideo('4601759356001', function(error, video) { 
-                //console.log(video) 
+                console.log(video) 
                 myPlayer.catalog.load(video);
                 myPlayer.play();
             })
