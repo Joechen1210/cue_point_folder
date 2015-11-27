@@ -36,6 +36,7 @@
             myPlayer.catalog.getVideo('4601759356001', function(error, video) { 
                 console.log(video) 
                 myPlayer.catalog.load(video);
+                myPlayer.muted();
                 myPlayer.play();
             })
         }
@@ -43,6 +44,7 @@
             myPlayer.catalog.getVideo('4601759356001', function(error, video) { 
                 console.log(video) 
                 myPlayer.catalog.load(video);
+                myPlayer.muted();
                 myPlayer.play();
             })
         }
