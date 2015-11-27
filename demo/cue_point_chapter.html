@@ -22,6 +22,10 @@
   data-embed="default"
   class="video-js" controls></video>
 <script src="//players.brightcove.net/4005328949001/45491277-1170-4ed0-a894-d97edfddce1b_default/index.min.js"></script>
-
+    <script>
+    videojs("myPlayer").ready(function(){
+            myPlayer = this;
+        }); 
+    </script>
   </body>
 </html>
