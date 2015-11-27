@@ -24,14 +24,22 @@
   data-embed="default"
   class="video-js" controls></video>
    <br/>
-    <button onclick="changeVideo()">change video</button>
+    <button onclick="changeVideo1()">video1</button>
+    <button onclick="changeVideo2()">video2</button>
 <script src="//players.brightcove.net/4005328949001/d3d6d500-d150-46d6-a8ee-5017bfaa1d6b_default/index.min.js"></script>
      
     <!-- custom script -->
     <script type="text/JavaScript">
         var myPlayer;
     
-        function changeVideo(){
+        function changeVideo1(){
+            myPlayer.catalog.getVideo('4601759356001', function(error, video) { 
+                console.log(video) 
+                myPlayer.catalog.load(video);
+                myPlayer.play();
+            })
+        }
+         function changeVideo2(){
             myPlayer.catalog.getVideo('4601759356001', function(error, video) { 
                 console.log(video) 
                 myPlayer.catalog.load(video);
