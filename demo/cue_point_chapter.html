@@ -25,7 +25,11 @@
     <script>
     videojs("myPlayer").ready(function(){
             myPlayer = this;
-        }); 
+        player.catalog.getVideo(player.options()['data-video-id'], function(error, video){
+        player.catalog.load(video);
+        console.log(video);
+        });
+           }); 
     </script>
   </body>
 </html>
