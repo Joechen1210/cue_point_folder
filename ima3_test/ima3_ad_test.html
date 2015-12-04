@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<video
+  id="myVideo"
+  data-video-id="4006182806001"
+  data-account="4005328949001"
+  data-player="d3d6d500-d150-46d6-a8ee-5017bfaa1d6b"
+  data-embed="default"
+  class="video-js" controls></video>
+<script src="//players.brightcove.net/4005328949001/d3d6d500-d150-46d6-a8ee-5017bfaa1d6b_default/index.min.js"></script>
+
+ <script src="//players.brightcove.net/videojs-ima3/videojs.ima3.min.js"></script>
+ 
+  <script type="text/javascript">
+    var player = videojs('myVideo');
+    player.ima3({
+      "serverUrl": "http://pubads.g.doubleclick.net/gampad/ads?sz=640x360&iu=/6062/iab_vast_samples/skippable&ciu_szs=300x250,728x90&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=[referrer_url]&correlator=[timestamp]"
+    });
+  </script>
+  </body>
+</html>
